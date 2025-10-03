@@ -38,7 +38,7 @@ export const PROJECTS = [
     image: project3,
     link: "https://athxrva07.github.io/Regal-Residences/",
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information • Did this as a part of a Hackathon",
+      "A simple real estate website project to showcase upscale properties in London that I did for a hackathon. ",
     technologies: ["HTML", "CSS", "JavaScript", "Frontend Design"],
   },
 ];
