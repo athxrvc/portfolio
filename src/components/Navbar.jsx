@@ -11,8 +11,8 @@ const Navbar = () => {
         <a href="https://www.linkedin.com/in/atharva-choudhary-1ba373277" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
-        
-        <a href="https://github.com/athxrva07" target="_blank" rel="noopener noreferrer">
+
+        <a href="https://github.com/athxrvc" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </a>
     </div>

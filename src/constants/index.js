@@ -4,7 +4,11 @@ import project3 from "../assets/projects/project-3.png";
 
 export const MAIN_CONTENT = `I am a placement year Computer Science student based in London. I am currently working as a Software Engineer at Elanco Animal Health.`;
 
-export const ABOUT_TEXT = "I’m Atharva, and I am currently pursuing a bachelor’s degree in computer science at Brunel University in the city of London. My academic journey is driven by a passion for digital security, and I’m continuously exploring the ever-evolving landscape of this critical field. Though I’m still exploring the various specializations within computer science, my enthusiasm keeps me engaged with the latest trends and breakthroughs in technology. Outside of my studies, I enjoy a well-rounded lifestyle. Video games offer me not just entertainment but also a sense of challenge and accomplishment. Additionally, my love for sports finds me eagerly following football and basketball, where the excitement of the games is always captivating.";
+export const ABOUT_TEXT = [
+  "Hi, I'm Atharva, a Computer Science undergraduate at Brunel University London, with a strong interest in backend development, data systems, and cybersecurity. I am currently working as a software engineer at Elanco Animal Health.",
+  "My academic journey is driven by curiosity about how secure, scalable, and reliable systems are designed and maintained. Through my studies, I've built a solid foundation in computer science while exploring different specialisations, with a growing focus on backend engineering, data-driven systems, and security principles.",
+  "Outside of academics, I enjoy watching football, Formula 1, and playing golf, as well as spending time hiking and travelling. I also keep up with developments in technology and enjoy learning about new tools and trends in the backend and data space."
+];
 
 export const EXPERIENCES = [
    {

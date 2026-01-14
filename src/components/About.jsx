@@ -25,7 +25,11 @@ const About = () => {
          transition={{duration: 0.5}}
          className="w-full lg:w-1/2">
             <div className="flex justify-center lg:justify-start">
-              <p className="max-w-xl py-6 my-8 font-light tracking-tighter">{ABOUT_TEXT}</p>
+              <div className="max-w-xl py-6 my-8">
+                {ABOUT_TEXT.map((paragraph, index) => (
+                  <p key={index} className="mb-4 font-light tracking-tighter">{paragraph}</p>
+                ))}
+              </div>
             </div>
         </motion.div>
         
