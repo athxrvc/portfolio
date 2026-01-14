@@ -13,7 +13,7 @@ const Contact = () => {
               <FaLinkedin />
             </a>
         
-            <a href="https://github.com/athxrva07" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-2xl">
+            <a href="https://github.com/athxrvc" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-2xl">
               <FaGithub />
             </a>
         </div>

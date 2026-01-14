@@ -29,7 +29,7 @@ export const PROJECTS = [
   {
     title: "Swiftbot: raspberry Pi based robot game",
     image: project1,
-    link: "https://github.com/athxrva07/Draw-Shapes",
+    link: "https://github.com/athxrvc/Draw-Shapes",
     description:
       "Developed a game using Swiftbot, a Raspberry Pi robot with wheels, a camera, and lights • Utilized an API provided by the university for integration and functionality enhancement • Implemented functionality to scan and decode QR codes on instruction • Programmed the robot to move and draw either a square or a triangle based on decoded text • Generated a text file containing detailed information about all the shapes drawn",
     technologies: ["Java", "Raspberry Pi", "Motion Control", "File Handling", "API Integration"],
@@ -37,7 +37,7 @@ export const PROJECTS = [
   {
     title: "Currency Converter",
     image: project2,
-    link: "https://athxrva07.github.io/Currency-Converter/",
+    link: "https://athxrvc.github.io/Currency-Converter/",
     description:
       "Developed a Currency Converter Website that allows users to convert amounts from one currency to another using real-time exchange rates • Integrated real-time exchange rates API for accurate and up-to-date currency conversions • Designed a simple and user-friendly interface for seamless user experience • Enabled users to convert amounts between different currencies efficiently",
     technologies: ["HTML", "CSS", "JavaScript", "API Integration"],
@@ -45,7 +45,7 @@ export const PROJECTS = [
   {
     title: "Regal Residences Website",
     image: project3,
-    link: "https://athxrva07.github.io/Regal-Residences/",
+    link: "https://athxrvc.github.io/Regal-Residences/",
     description:
       "A simple real estate website project to showcase upscale properties in London that I did for a hackathon. ",
     technologies: ["HTML", "CSS", "JavaScript", "Frontend Design"],
