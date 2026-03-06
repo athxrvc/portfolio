@@ -1,4 +1,4 @@
-import { CONTACT } from "../constants"
+import { CONTACT } from "../../constants"
 import {FaLinkedin} from "react-icons/fa";
 import {FaGithub} from "react-icons/fa";
 

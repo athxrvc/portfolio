@@ -1,11 +1,11 @@
-import Main from "./components/Main";
-import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Technologies from "./components/Technologies";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import Hero from "./components/sections/Hero";
+import About from "./components/sections/About";
+import Technologies from "./components/sections/Technologies";
+import Experience from "./components/sections/Experience";
+import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
 
       <div className="container px-8 mx-auto">
         <Navbar />
-        <Main />
+        <Hero />
         <About />
         <Technologies />
         <Experience />

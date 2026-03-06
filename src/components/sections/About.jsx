@@ -1,5 +1,5 @@
-import aboutImg from "../assets/about.png";
-import { ABOUT_TEXT } from "../constants";
+import aboutImg from "../../assets/images/about.png";
+import { ABOUT_TEXT } from "../../constants";
 import { motion } from "framer-motion";
 
 const About = () => {

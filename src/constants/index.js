@@ -1,6 +1,6 @@
-import project1 from "../assets/projects/project-1.png";
-import project2 from "../assets/projects/project-2.png";
-import project3 from "../assets/projects/project-3.png";
+import project1 from "../assets/images/projects/project-1.png";
+import project2 from "../assets/images/projects/project-2.png";
+import project3 from "../assets/images/projects/project-3.png";
 
 export const MAIN_CONTENT = `I am a placement year Computer Science student based in London. I am currently working as a Software Engineer at Elanco Animal Health.`;
 
