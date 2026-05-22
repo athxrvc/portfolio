@@ -1,11 +1,11 @@
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
-import Hero from "./components/sections/Hero";
-import About from "./components/sections/About";
-import Technologies from "./components/sections/Technologies";
-import Experience from "./components/sections/Experience";
-import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact";
+import Footer from "./layouts/Footer";
+import Navbar from "./layouts/Navbar";
+import About from "./sections/About";
+import Contact from "./sections/Contact";
+import Experience from "./sections/Experience";
+import Hero from "./sections/Hero";
+import Projects from "./sections/Projects";
+import Technologies from "./sections/Technologies";
 
 const App = () => {
   return (

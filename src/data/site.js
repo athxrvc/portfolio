@@ -11,15 +11,13 @@ export const ABOUT_TEXT = [
 ];
 
 export const EXPERIENCES = [
-   {
+  {
     year: "June 2025 - Present",
     role: "Software Engineer",
     company: "Elanco Animal Health | Hook, UK",
     description: `Currently working as a Software Engineer at Elanco Animal Health, contributing to the development and maintenance of software solutions that support the company's mission to improve animal health and well-being.\n Engaging in continuous learning and professional development to stay abreast of emerging technologies and best practices in software engineering.`,
     technologies: ["Google Cloud", "Terraform", "Python", "Typescript"],
   },
-
-
   {
     year: "July 2024 - October 2024",
     role: "Software Engineering Fellow",
