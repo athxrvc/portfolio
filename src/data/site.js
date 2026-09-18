@@ -16,7 +16,8 @@ export const siteContent = {
   },
   about: {
     paragraphs: [
-      "Hi! I'm Atharva, a Computer Science student at Brunel University of London. I'm particularly interested in backend engineering, cloud infrastructure and data systems, and enjoy understanding how the different pieces of a system come together behind the scenes.",
+      "Hi!",
+      "I'm Atharva, a Computer Science student at Brunel University of London. I'm particularly interested in backend engineering, cloud infrastructure and data systems, and enjoy understanding how the different pieces of a system come together behind the scenes.",
       "I recently completed my placement year at Elanco Animal Health, where I worked as a Software Engineer on the R&D Vision Platform. I worked on cloud-based video processing pipelines using GCP for large-scale computer vision workflows, as well as backend services, video lifecycle management and metadata orchestration. The experience gave me a much stronger interest in cloud infrastructure and building systems that can scale reliably as the amount of data and users grows.",
       "Alongside university, I enjoy working on personal projects and experimenting with technologies outside of my coursework. I'm particularly interested in learning by building things, whether that's software, cloud infrastructure or even putting together a PC from scratch.",
       "Outside of a rectangle screen, I spend a lot of my time following football and Formula 1, playing golf, hiking and travelling. I'm also interested in financial markets and fashion, and recently started learning Japanese. More recently, I've been experimenting with DJing and music, which has been a fun change from spending most of my time behind a computer.",
