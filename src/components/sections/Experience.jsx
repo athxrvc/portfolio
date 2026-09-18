@@ -42,7 +42,7 @@ const Experience = () => {
                   {experience.company}
                 </span>
               </h6>
-              <div className="mb-4 text-neutral-400">
+              <div className="mb-4 space-y-2 text-neutral-400">
                 {experience.highlights.map((highlight) => (
                   <p key={highlight}>{highlight}</p>
                 ))}

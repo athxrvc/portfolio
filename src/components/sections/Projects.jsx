@@ -39,9 +39,9 @@ const Projects = () => {
               className="w-full max-w-xl lg:w-3/4"
             >
               <h6 className="mb-2 font-semibold">{project.title}</h6>
-              <div className="mb-4 text-neutral-400">
+              <div className="mb-4 space-y-2 text-neutral-400">
                 {project.description.map((point) => (
-                  <p key={point}>{`• ${point}`}</p>
+                  <p key={point}>{point}</p>
                 ))}
               </div>
               {project.technologies.map((tech, techIndex) => (
