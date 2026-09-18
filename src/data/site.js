@@ -12,24 +12,27 @@ export const siteContent = {
     name: "Atharva",
     role: "CS Student",
     introduction:
-      "I am a placement year Computer Science student based in London. I am currently working as a Software Engineer at Elanco Animal Health.",
+      "I am a Computer Science student based in London. I recently completed my placement year as a Software Engineer at Elanco Animal Health.",
   },
   about: {
     paragraphs: [
-      "Hi, I'm Atharva, a Computer Science undergraduate at Brunel University London, with a strong interest in backend development, data systems, and cybersecurity. I am currently working as a software engineer at Elanco Animal Health.",
-      "My academic journey is driven by curiosity about how secure, scalable, and reliable systems are designed and maintained. Through my studies, I've built a solid foundation in computer science while exploring different specialisations, with a growing focus on backend engineering, data-driven systems, and security principles.",
-      "Outside of academics, I enjoy watching football, Formula 1, and playing golf, as well as spending time hiking and travelling. I also keep up with developments in technology and enjoy learning about new tools and trends in the backend and data space.",
+      "Hi! I'm Atharva, a Computer Science student at Brunel University of London. I'm particularly interested in backend engineering, cloud infrastructure and data systems, and enjoy understanding how the different pieces of a system come together behind the scenes.",
+      "I recently completed my placement year at Elanco Animal Health, where I worked as a Software Engineer on the R&D Vision Platform. I worked on cloud-based video processing pipelines using GCP for large-scale computer vision workflows, as well as backend services, video lifecycle management and metadata orchestration. The experience gave me a much stronger interest in cloud infrastructure and building systems that can scale reliably as the amount of data and users grows.",
+      "Alongside university, I enjoy working on personal projects and experimenting with technologies outside of my coursework. I'm particularly interested in learning by building things, whether that's software, cloud infrastructure or even putting together a PC from scratch.",
+      "Outside of a rectangle screen, I spend a lot of my time following football and Formula 1, playing golf, hiking and travelling. I'm also interested in financial markets and fashion, and recently started learning Japanese. More recently, I've been experimenting with DJing and music, which has been a fun change from spending most of my time behind a computer.",
     ],
   },
   experience: [
     {
       id: "elanco-software-engineer",
-      period: "June 2025 - Present",
+      period: "June 2025 - July 2026",
       role: "Software Engineer",
       company: "Elanco Animal Health | Hook, UK",
       highlights: [
-        "Currently working as a Software Engineer at Elanco Animal Health, contributing to the development and maintenance of software solutions that support the company's mission to improve animal health and well-being.",
-        "Engaging in continuous learning and professional development to stay abreast of emerging technologies and best practices in software engineering.",
+        "Architected and maintained cloud-based video processing pipelines (GCP) for large-scale computer vision workflows.",
+        "Automated previously manual workflows, reducing time-to-insight and human error in video analysis.",
+        "Contributing to system design decisions improving scalability, performance, and reliability.",
+        "Developed backend services and UI features for video lifecycle management and metadata orchestration.",
       ],
       technologies: ["Google Cloud", "Terraform", "Python", "Typescript"],
     },
