@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 import profilePic from "../../assets/images/profile.png";
-import { MAIN_CONTENT } from "../../data/site";
+import { siteContent } from "../../data/site";
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -44,7 +44,7 @@ const Main = () => {
               animate="visible"
               className="max-w-xl py-6 my-2 font-light tracking-tighter"
             >
-              {MAIN_CONTENT}
+              {siteContent.hero.introduction}
             </motion.p>
           </div>
         </div>

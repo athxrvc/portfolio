@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { PROJECTS } from "../../data/site";
+import { siteContent } from "../../data/site";
 
 const Projects = () => {
   return (
@@ -18,8 +18,8 @@ const Projects = () => {
       </motion.h2>
 
       <div>
-        {PROJECTS.map((project, index) => (
-          <div key={index} className="flex flex-wrap mb-16 lg:justify-center">
+        {siteContent.projects.map((project) => (
+          <div key={project.id} className="flex flex-wrap mb-16 lg:justify-center">
 
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
@@ -40,8 +40,8 @@ const Projects = () => {
             >
               <h6 className="mb-2 font-semibold">{project.title}</h6>
               <div className="mb-4 text-neutral-400">
-                {project.description.split("•").map((point, descriptionIndex) => (
-                  <p key={descriptionIndex}>{`• ${point.trim()}`}</p>
+                {project.description.map((point) => (
+                  <p key={point}>{`• ${point}`}</p>
                 ))}
               </div>
               {project.technologies.map((tech, techIndex) => (

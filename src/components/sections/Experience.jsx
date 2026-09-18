@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { EXPERIENCES } from "../../data/site";
+import { siteContent } from "../../data/site";
 
 const Experience = () => {
   return (
@@ -17,9 +17,9 @@ const Experience = () => {
       </motion.h2>
 
       <div>
-        {EXPERIENCES.map((experience, index) => (
+        {siteContent.experience.map((experience) => (
           <div
-            key={index} className="flex flex-wrap mb-8 lg:justify-center">
+            key={experience.id} className="flex flex-wrap mb-8 lg:justify-center">
 
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
@@ -27,7 +27,7 @@ const Experience = () => {
               transition={{ duration: 1 }}
               className="w-full lg:w-1/4"
             >
-              <p className="mb-2 text-sm text-neutral-100">{experience.year}</p>
+              <p className="mb-2 text-sm text-neutral-100">{experience.period}</p>
             </motion.div>
 
             <motion.div
@@ -42,7 +42,11 @@ const Experience = () => {
                   {experience.company}
                 </span>
               </h6>
-              <p className="mb-4 text-neutral-400">{experience.description}</p>
+              <div className="mb-4 text-neutral-400">
+                {experience.highlights.map((highlight) => (
+                  <p key={highlight}>{highlight}</p>
+                ))}
+              </div>
               {experience.technologies.map((tech, techIndex) => (
                 <span key={techIndex} className="px-2 py-1 mt-4 mr-2 text-sm font-medium rounded text-cyan-400 bg-neutral-900">{tech}</span>
               ))}

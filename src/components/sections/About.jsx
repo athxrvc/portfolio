@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 import aboutImg from "../../assets/images/about.png";
-import { ABOUT_TEXT } from "../../data/site";
+import { siteContent } from "../../data/site";
 
 const About = () => {
   return <div className="pb-16 border-b border-neutral-900">
@@ -29,8 +29,8 @@ const About = () => {
         className="w-full lg:w-1/2">
         <div className="flex justify-center lg:justify-start">
           <div className="max-w-xl py-6 my-8">
-            {ABOUT_TEXT.map((paragraph, index) => (
-              <p key={index} className="mb-4 font-light tracking-tighter">{paragraph}</p>
+            {siteContent.about.paragraphs.map((paragraph) => (
+              <p key={paragraph} className="mb-4 font-light tracking-tighter">{paragraph}</p>
             ))}
           </div>
         </div>
