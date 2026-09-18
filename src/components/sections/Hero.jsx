@@ -1,7 +1,9 @@
+"use client";
+
 import { motion } from "framer-motion";
 
-import profilePic from "../assets/images/profile.png";
-import { MAIN_CONTENT } from "../data/site";
+import profilePic from "../../assets/images/profile.png";
+import { MAIN_CONTENT } from "../../data/site";
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -53,7 +55,7 @@ const Main = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
               className="rounded-xl"
-              src={profilePic}
+              src={profilePic.src}
               alt="profile picture"
             />
           </div>

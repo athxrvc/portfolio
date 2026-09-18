@@ -1,6 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 
-import { PROJECTS } from "../data/site";
+import { PROJECTS } from "../../data/site";
 
 const Projects = () => {
   return (
@@ -26,7 +28,7 @@ const Projects = () => {
               className="w-full lg:w-1/4"
             >
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <img src={project.image} width={150} height={150} alt={project.title} className="mb-6 rounded" />
+                <img src={project.image.src} width={150} height={150} alt={project.title} className="mb-6 rounded" />
               </a>
             </motion.div>
 
