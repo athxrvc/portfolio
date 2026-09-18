@@ -1,7 +1,9 @@
+"use client";
+
 import { motion } from "framer-motion";
 
-import aboutImg from "../assets/images/about.png";
-import { ABOUT_TEXT } from "../data/site";
+import aboutImg from "../../assets/images/about.png";
+import { ABOUT_TEXT } from "../../data/site";
 
 const About = () => {
   return <div className="pb-16 border-b border-neutral-900">
@@ -16,7 +18,7 @@ const About = () => {
         transition={{ duration: 0.5 }}
         className="w-full lg:w-1/2 lg:p-8">
         <div className="flex justify-center item-center">
-          <img className="rounded-xl" src={aboutImg} alt="about" />
+          <img className="rounded-xl" src={aboutImg.src} alt="about" />
         </div>
       </motion.div>
 

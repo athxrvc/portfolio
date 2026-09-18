@@ -1,5 +1,7 @@
-import Footer from "./layouts/Footer";
-import Navbar from "./layouts/Navbar";
+"use client";
+
+import Footer from "./layout/Footer";
+import Navbar from "./layout/Navbar";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";

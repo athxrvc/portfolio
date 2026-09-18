@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { RiNodejsLine, RiReactjsLine } from "react-icons/ri";
 import { SiExpress } from "react-icons/si";

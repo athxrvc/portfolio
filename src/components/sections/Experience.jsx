@@ -1,6 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 
-import { EXPERIENCES } from "../data/site";
+import { EXPERIENCES } from "../../data/site";
 
 const Experience = () => {
   return (
