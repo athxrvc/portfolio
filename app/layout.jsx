@@ -1,7 +1,7 @@
 import Script from "next/script";
 import PropTypes from "prop-types";
 
-import "../src/styles/globals.css";
+import "./globals.css";
 
 export const metadata = {
   title: "Atharva Choudhary | Software Engineer",
