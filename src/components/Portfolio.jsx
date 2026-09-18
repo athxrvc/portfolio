@@ -1,6 +1,4 @@
 "use client";
-
-import Footer from "./layout/Footer";
 import Navbar from "./layout/Navbar";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
@@ -27,7 +25,6 @@ const App = () => {
         <Experience />
         <Projects />
         <Contact />
-        <Footer />
       </div>
     </div>
   );
