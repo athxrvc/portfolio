@@ -1,33 +1,29 @@
-"use client";
-import Navbar from "./layout/Navbar";
+import Header from "./layout/Header";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
-import Technologies from "./sections/Technologies";
+import Stack from "./sections/Stack";
 
-const App = () => {
-  return (
-    <div className="overflow-x-hidden antialiased text-neutral-300 selection:bg-cyan-300 selection:text-cyan-900">
-      <div className="fixed top-0 w-full h-full -z-10">
-        <div className="relative h-full w-full bg-black">
-          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-          <div className="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
-        </div>
-      </div>
+const Portfolio = () => (
+  <div className="mx-auto max-w-4xl px-6">
+    <Header />
+    <main>
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <Stack />
+      <Contact />
+    </main>
+    <footer className="flex items-center justify-between border-t border-line py-8 font-mono text-xs text-muted">
+      <span>© {new Date().getFullYear()} Atharva Choudhary</span>
+      <a href="#top" className="transition-colors hover:text-accent">
+        Back to top ↑
+      </a>
+    </footer>
+  </div>
+);
 
-      <div className="container px-8 mx-auto">
-        <Navbar />
-        <Hero />
-        <About />
-        <Technologies />
-        <Experience />
-        <Projects />
-        <Contact />
-      </div>
-    </div>
-  );
-};
-
-export default App;
+export default Portfolio;

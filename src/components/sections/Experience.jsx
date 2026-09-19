@@ -1,62 +1,39 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 import { siteContent } from "../../data/site";
+import Section from "../ui/Section";
 
-const Experience = () => {
-  return (
-    <div className="pb-16 border-b border-neutral-900">
-      <motion.h2
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-4xl text-center"
-      >
-        EXPERIENCE
-      </motion.h2>
+const Experience = () => (
+  <Section id="experience" index="02" title="Experience">
+    <ol className="divide-y divide-line">
+      {siteContent.experience.map((job) => (
+        <li
+          key={job.id}
+          className="reveal grid gap-3 py-10 first:pt-0 last:pb-0 sm:grid-cols-[9rem_1fr] sm:gap-8"
+        >
+          <p className="pt-2 font-mono text-xs text-muted">{job.period}</p>
 
-      <div>
-        {siteContent.experience.map((experience) => (
-          <div
-            key={experience.id} className="flex flex-wrap mb-8 lg:justify-center">
+          <div>
+            <h3 className="font-serif text-3xl leading-tight">{job.role}</h3>
+            <p className="mt-1 text-muted">
+              {job.company} <span className="text-line">/</span> {job.location}
+            </p>
 
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
-            >
-              <p className="mb-2 text-sm text-neutral-100">{experience.period}</p>
-            </motion.div>
-
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <h6 className="mb-2 font-semibold">
-                {experience.role} - {" "}
-                <span className="text-sm text-purple-100">
-                  {experience.company}
-                </span>
-              </h6>
-              <div className="mb-4 space-y-2 text-neutral-400">
-                {experience.highlights.map((highlight) => (
-                  <p key={highlight}>{highlight}</p>
-                ))}
-              </div>
-              {experience.technologies.map((tech, techIndex) => (
-                <span key={techIndex} className="px-2 py-1 mt-4 mr-2 text-sm font-medium rounded text-cyan-400 bg-neutral-900">{tech}</span>
+            <ul className="mt-5 max-w-xl space-y-2.5 leading-relaxed text-fg/75">
+              {job.highlights.map((highlight) => (
+                <li key={highlight} className="flex gap-3">
+                  <span aria-hidden className="mt-2.5 h-px w-3 shrink-0 bg-accent" />
+                  <span>{highlight}</span>
+                </li>
               ))}
-            </motion.div>
+            </ul>
 
+            <p className="mt-5 font-mono text-xs text-muted">
+              {job.technologies.join("  ·  ")}
+            </p>
           </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+        </li>
+      ))}
+    </ol>
+  </Section>
+);
 
 export default Experience;

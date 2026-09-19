@@ -1,43 +1,36 @@
-"use client";
-
-import { motion } from "framer-motion";
-
-import aboutImg from "../../assets/images/about.png";
 import { siteContent } from "../../data/site";
+import Section from "../ui/Section";
 
 const About = () => {
-  return <div className="pb-16 border-b border-neutral-900">
-    <h2 className="my-20 text-4xl text-center"> ABOUT
-      <span className="text-neutral-500"> ME</span>
-    </h2>
-    <div className="flex flex-wrap">
+  const { paragraphs, elsewhereLabel, elsewhere } = siteContent.about;
 
-      <motion.div
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 0.5 }}
-        className="w-full lg:w-1/2 lg:p-8">
-        <div className="flex justify-center item-center">
-          <img className="rounded-xl" src={aboutImg.src} alt="about" />
-        </div>
-      </motion.div>
+  return (
+    <Section id="about" index="01" title="About">
+      <div className="max-w-xl space-y-5 text-lg leading-relaxed">
+        {paragraphs.map((paragraph, i) => (
+          <p key={paragraph} className={i === 0 ? "text-fg" : "text-fg/70"}>
+            {paragraph}
+          </p>
+        ))}
+      </div>
 
-      <motion.div
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: 100 }}
-        transition={{ duration: 0.5 }}
-        className="w-full lg:w-1/2">
-        <div className="flex justify-center lg:justify-start">
-          <div className="max-w-xl py-6 my-8">
-            {siteContent.about.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="mb-4 font-light tracking-tighter">{paragraph}</p>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
-    </div>
-  </div>;
+      <div className="reveal mt-12 max-w-xl">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
+          {elsewhereLabel}
+        </p>
+        <ul className="mt-4 flex flex-wrap gap-2">
+          {elsewhere.map((item) => (
+            <li
+              key={item}
+              className="rounded-full border border-line px-3 py-1 text-sm text-fg/80"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Section>
+  );
 };
 
 export default About;

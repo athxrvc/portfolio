@@ -1,60 +1,67 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 import { siteContent } from "../../data/site";
+import ArrowLink from "../ui/ArrowLink";
+import Section from "../ui/Section";
 
 const Projects = () => {
+  const { featured, earlier } = siteContent.projects;
+
   return (
-    <div className="border-b border-neutral-900">
+    <Section id="projects" index="03" title="Projects">
+      <ul className="divide-y divide-line">
+        {featured.map((project, i) => (
+          <li key={project.id} className="reveal group py-10 first:pt-0">
+            <div className="flex items-baseline justify-between gap-4 font-mono text-xs text-muted">
+              <span>{String(i + 1).padStart(2, "0")}</span>
+              <span>{project.year}</span>
+            </div>
 
-      <motion.h2
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-4xl text-center"
-      >
-        PROJECTS
-      </motion.h2>
+            <h3 className="mt-3 font-serif text-4xl leading-tight md:text-5xl">
+              <ArrowLink href={project.link}>{project.title}</ArrowLink>
+            </h3>
+            <p className="mt-1 text-lg text-muted">{project.tagline}</p>
 
-      <div>
-        {siteContent.projects.map((project) => (
-          <div key={project.id} className="flex flex-wrap mb-16 lg:justify-center">
+            <p className="mt-5 max-w-xl leading-relaxed text-fg/75">
+              {project.description}
+            </p>
 
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
-            >
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <img src={project.image.src} width={150} height={150} alt={project.title} className="mb-6 rounded" />
-              </a>
-            </motion.div>
-
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
-              <div className="mb-4 space-y-2 text-neutral-400">
-                {project.description.map((point) => (
-                  <p key={point}>{point}</p>
-                ))}
-              </div>
-              {project.technologies.map((tech, techIndex) => (
-                <span key={techIndex} className="px-2 py-1 mr-2 text-sm font-medium text-purple-400 rounded bg-neutral-900">
-                  {tech}
-                </span>
-              ))}
-            </motion.div>
-
-          </div>
+            <p className="mt-5 font-mono text-xs text-muted">
+              {project.technologies.join("  ·  ")}
+            </p>
+          </li>
         ))}
+      </ul>
+
+      <div className="reveal mt-6 border-t border-line pt-10">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
+          Earlier &amp; smaller
+        </p>
+
+        <ul className="mt-2 divide-y divide-line">
+          {earlier.map((project) => (
+            <li
+              key={project.id}
+              className="grid gap-x-6 gap-y-1 py-4 sm:grid-cols-[12rem_1fr_auto] sm:items-baseline"
+            >
+              <span className="font-medium">
+                <ArrowLink href={project.link}>{project.title}</ArrowLink>
+              </span>
+              <span className="text-sm leading-relaxed text-muted">
+                {project.description}
+                {project.live && (
+                  <>
+                    {" "}
+                    <ArrowLink href={project.live} className="text-fg/80">
+                      live
+                    </ArrowLink>
+                  </>
+                )}
+              </span>
+              <span className="font-mono text-xs text-muted">{project.year}</span>
+            </li>
+          ))}
+        </ul>
       </div>
-    </div>
+    </Section>
   );
 };
 

@@ -1,68 +1,53 @@
-"use client";
-
-import { motion } from "framer-motion";
-
-import profilePic from "../../assets/images/profile.png";
 import { siteContent } from "../../data/site";
+import CopyCommand from "../ui/CopyCommand";
+import LocalTime from "../ui/LocalTime";
 
-const container = (delay) => ({
-  hidden: { x: -100, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.5, delay },
-  },
-});
+const Hero = () => {
+  const { name, tagline, introduction, sshCommand, sshHint } = siteContent.hero;
 
-const Main = () => {
   return (
-    <div className="pb-16 border-b border-neutral-900 lg:mb-35">
-      <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-center lg:items-start">
-            <motion.h1
-              variants={container(0)}
-              initial="hidden"
-              animate="visible"
-              className="pb-8 text-6xl font-thin tracking-tight lg:mt-16 lg:text-6xl"
-            >
-              Atharva
-            </motion.h1>
+    <section id="top" className="relative pb-20 pt-20 md:pb-28 md:pt-32">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -inset-x-6 top-0 -z-10 h-[32rem] bg-[radial-gradient(28rem_18rem_at_50%_40%,rgb(var(--accent)/0.1),transparent)]"
+      />
+      <p
+        className="rise font-mono text-xs uppercase tracking-[0.2em] text-muted"
+        style={{ "--i": 0 }}
+      >
+        Software engineer <span className="mx-2 text-accent">/</span> <LocalTime />
+      </p>
 
-            <motion.span
-              variants={container(0.5)}
-              initial="hidden"
-              animate="visible"
-              className="text-3xl tracking-tight text-transparent bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text"
-            >
-              CS Student
-            </motion.span>
+      <h1
+        className="rise mt-6 font-serif text-6xl leading-[0.95] tracking-tight sm:text-7xl md:text-8xl"
+        style={{ "--i": 1 }}
+      >
+        {name}
+      </h1>
 
-            <motion.p
-              variants={container(1)}
-              initial="hidden"
-              animate="visible"
-              className="max-w-xl py-6 my-2 font-light tracking-tighter"
-            >
-              {siteContent.hero.introduction}
-            </motion.p>
-          </div>
-        </div>
-        <div className="w-full lg:w-1/2 lg:p-8">
-          <div className="flex justify-center">
-            <motion.img
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
-              className="rounded-xl"
-              src={profilePic.src}
-              alt="profile picture"
-            />
-          </div>
-        </div>
+      <p
+        className="rise mt-8 max-w-2xl font-serif text-2xl leading-snug text-muted md:text-3xl"
+        style={{ "--i": 2 }}
+      >
+        {tagline}
+        <span
+          aria-hidden
+          className="caret ml-1.5 inline-block h-[0.75em] w-[0.42em] translate-y-[0.06em] bg-accent"
+        />
+      </p>
+
+      <p
+        className="rise mt-8 max-w-xl leading-relaxed text-fg/70"
+        style={{ "--i": 3 }}
+      >
+        {introduction}
+      </p>
+
+      <div className="rise mt-10" style={{ "--i": 4 }}>
+        <CopyCommand command={sshCommand} hint={sshHint} />
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Main;
+export default Hero;
