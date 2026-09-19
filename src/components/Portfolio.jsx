@@ -18,7 +18,7 @@ const Portfolio = () => (
       <Contact />
     </main>
     <footer className="flex items-center justify-between border-t border-line py-8 font-mono text-xs text-muted">
-      <span>© {new Date().getFullYear()} Atharva Choudhary</span>
+      <span>© {new Date().getFullYear()} Atharva</span>
       <a href="#top" className="transition-colors hover:text-accent">
         Back to top ↑
       </a>

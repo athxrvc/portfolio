@@ -15,9 +15,9 @@ const serif = Instrument_Serif({
 });
 
 export const metadata = {
-  title: "Atharva Choudhary | Software Engineer",
+  title: "Atharva | Software Engineer",
   description:
-    "Portfolio of Atharva Choudhary, a software engineer interested in backend systems, cloud infrastructure and data.",
+    "Portfolio of Atharva, a software engineer interested in backend systems, cloud infrastructure and data.",
   icons: {
     icon: "/favicon.jpeg",
   },

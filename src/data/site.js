@@ -5,7 +5,7 @@ const socialLinks = {
 
 export const siteContent = {
   hero: {
-    name: "Atharva Choudhary",
+    name: "Atharva",
     tagline: "Software engineer, drawn to the parts of a system you don't see.",
     introduction:
       "Computer Science student at Brunel University London. I recently finished a placement year at Elanco Animal Health, building cloud video pipelines on GCP.",
@@ -100,14 +100,6 @@ export const siteContent = {
         title: "readme-gen",
         description: "AI-powered README generation as a VS Code extension.",
         link: "https://github.com/athxrvc/readme-gen",
-      },
-      {
-        id: "geosearch",
-        year: "2024",
-        title: "GeoSearch",
-        description: "Look up any country and export what you find as a PDF.",
-        link: "https://github.com/athxrvc/GeoSearch",
-        live: "https://geo-search-six.vercel.app",
       },
       {
         id: "currency-converter",
