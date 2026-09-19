@@ -1,0 +1,4 @@
+# Next 15 pins postcss@8.4.31, which has known advisories. Force a patched
+# release for Next's copy only. Remove once Next ships a patched postcss.
+overrides:
+  "next>postcss": "^8.5.23"
