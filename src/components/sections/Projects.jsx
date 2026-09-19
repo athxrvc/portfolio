@@ -12,7 +12,12 @@ const Projects = () => {
           <li key={project.id} className="reveal group py-10 first:pt-0">
             <div className="flex items-baseline justify-between gap-4 font-mono text-xs text-muted">
               <span>{String(i + 1).padStart(2, "0")}</span>
-              <span>{project.year}</span>
+              <span>
+                {project.badge && (
+                  <span className="mr-3 text-accent">{project.badge}</span>
+                )}
+                {project.year}
+              </span>
             </div>
 
             <h3 className="mt-3 font-serif text-4xl leading-tight md:text-5xl">

@@ -63,6 +63,17 @@ export const siteContent = {
   projects: {
     featured: [
       {
+        id: "homeport",
+        year: "2026",
+        badge: "Open source · MIT",
+        title: "Homeport",
+        tagline: "Self-hosted, OpenAI-compatible API for local LLMs",
+        description:
+          "Run a model on your own computer and use it from anywhere with a single URL. Homeport chains Ollama, LiteLLM and an optional Cloudflare Tunnel into an OpenAI-compatible endpoint that existing SDKs and chat tools work with unchanged. It's secure by default (an API key on every request, Ollama never exposed directly), needs no router port forwarding, and one start script generates the key and prints the URL.",
+        link: "https://github.com/athxrvc/Homeport",
+        technologies: ["Ollama", "LiteLLM", "Cloudflare Tunnel", "PowerShell", "Bash"],
+      },
+      {
         id: "portfolio-terminal",
         year: "2026",
         title: "portfolio-terminal",
@@ -81,16 +92,6 @@ export const siteContent = {
           "A self-hosted bot that answers in enabled channels using Google AI Studio, OpenAI or Anthropic models. Recent messages give it short-term context, and older conversation is summarised into long-term memory in PostgreSQL (Cloud SQL, provisioned with Terraform). Channels have their own modes, and admins toggle the AI per channel.",
         link: "https://github.com/athxrvc/openclaw-discord",
         technologies: ["Python", "PostgreSQL", "Prisma", "Terraform", "GCP"],
-      },
-      {
-        id: "local-llm-api-gateway",
-        year: "2026",
-        title: "Local-LLM-API-Gateway",
-        tagline: "Local models behind an OpenAI-compatible API",
-        description:
-          "A self-hosted gateway that lets any OpenAI-style client talk to models running locally: client to LiteLLM to Ollama. Data stays on your machine by default, and an optional Cloudflare Tunnel publishes the endpoint when you want it reachable.",
-        link: "https://github.com/athxrvc/Local-LLM-API-Gateway",
-        technologies: ["Ollama", "LiteLLM", "Cloudflare Tunnel"],
       },
     ],
     earlier: [
