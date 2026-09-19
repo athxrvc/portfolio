@@ -1,12 +1,23 @@
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import Script from "next/script";
 import PropTypes from "prop-types";
 
 import "./globals.css";
 
+const sans = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
+const serif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
 export const metadata = {
-  title: "Atharva Choudhary | Software Engineer",
+  title: "Atharva | Software Engineer",
   description:
-    "Portfolio of Atharva Choudhary, a software engineer focused on backend systems, data, and cybersecurity.",
+    "Portfolio of Atharva, a software engineer interested in backend systems, cloud infrastructure and data.",
   icons: {
     icon: "/favicon.jpeg",
   },
@@ -14,8 +25,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={`${sans.variable} ${mono.variable} ${serif.variable}`}>
+      <body className="font-sans antialiased">
         {children}
         <Script
           async
